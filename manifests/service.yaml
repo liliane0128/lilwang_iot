@@ -1,0 +1,14 @@
+# type: LoadBalancer so k3d's built-in serverlb picks it up and forwards the
+# cluster's -p "8888:8888@loadbalancer" port mapping straight to this Service.
+apiVersion: v1
+kind: Service
+metadata:
+  name: wil-playground
+  namespace: dev
+spec:
+  type: LoadBalancer
+  selector:
+    app: wil-playground
+  ports:
+    - port: 8888
+      targetPort: 8888
