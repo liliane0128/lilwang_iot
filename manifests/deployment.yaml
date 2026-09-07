@@ -2,7 +2,7 @@
 # this repo lives in the Inception_of_things repo's p3/confs/application.yaml).
 # The v1 -> v2 demo is: change the tag below, commit, push -- Argo CD's
 # automated + selfHeal sync policy picks it up on its own.
-apiVersion: apps/v2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wil-playground
@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
         - name: wil-playground
-          image: wil42/playground:v1
+          image: wil42/playground:v2
           ports:
             - containerPort: 8888
