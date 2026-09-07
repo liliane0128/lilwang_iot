@@ -1,7 +1,10 @@
 # Deployed into the `dev` namespace by Argo CD (the Application CR watching
 # this repo lives in the Inception_of_things repo's p3/confs/application.yaml).
-# The v1 -> v2 demo is: change the tag below, commit, push -- Argo CD's
-# automated + selfHeal sync policy picks it up on its own.
+#
+# The v1 -> v2 demo: bump the image tag on the `image:` line below
+# (wil42/playground:v1 -> :v2), commit, push -- Argo CD's automated +
+# selfHeal sync policy picks it up on its own.
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
